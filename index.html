@@ -18,18 +18,48 @@
     html, body {
       height: 100%;
       margin: 0;
+      font-family: Arial, sans-serif;
     }
     iframe {
       width: 100%;
       height: 100%;
       border: none;
     }
+    .download-btn {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      background: #000;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      z-index: 1000;
+    }
+    .download-btn:hover {
+      opacity: 0.85;
+    }
   </style>
 </head>
 
 <body>
+
+  <!-- Download Button -->
+  <a href="Sanghita_Chakraborty.pdf"
+     download
+     class="download-btn"
+     onclick="gtag('event', 'resume_download', {
+       event_category: 'Resume',
+       event_label: 'PDF Download'
+     });">
+     Download Resume
+  </a>
+
+  <!-- Resume Viewer -->
   <iframe src="Sanghita_Chakraborty.pdf"
           onload="gtag('event', 'resume_view');">
   </iframe>
+
 </body>
 </html>
